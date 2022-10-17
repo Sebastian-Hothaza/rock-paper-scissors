@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div> This game is currently only playable in the console! </div>
+
+
+    <script>
+        // Returns string corresponding to computers choice
+        let computerScore = 0;
+        let playerScore = 0;
+        let numTies = 0;
+        const numRounds = 3;
+
+        
+        function getComputerChoice(){
+            let num = Math.floor(Math.random() * 3 + 1);
+            switch (num){
+                case 1:
+                    return "rock";
+                case 2:
+                    return "paper";
+                case 3:
+                    return "scissor";
+            }
+        }
+        
+        // Issue: NO input checking
+        function getPlayerChoice(){
+            return prompt("Choose: rock, paper or scissors");
+            //return "rock";
+        }
+        
+
+        
+
+        // Plays a round and returns a string of the resulting winner (OneOf: Player, Computer or Tie)
+        function playRound(playerSelection, computerSelection){
+            if (playerSelection.toUpperCase() === "ROCK"){
+                if (computerSelection.toUpperCase() === "ROCK"){
+                    return "Tie"
+                } else if (computerSelection.toUpperCase() === "PAPER"){
+                    return "Computer"
+                } else {
+                    return "Player"
+                }
+            } else if (playerSelection.toUpperCase() === "PAPER"){
+                if (computerSelection.toUpperCase() === "ROCK"){
+                    return "Player"
+                } else if (computerSelection.toUpperCase() === "PAPER"){
+                    return "Tie"
+                } else {
+                    return "Computer"
+                }
+            } else{
+                if (computerSelection.toUpperCase() === "ROCK"){
+                    return "Computer"
+                } else if (computerSelection.toUpperCase() === "PAPER"){
+                    return "Player"
+                } else {
+                    return  "Tie"
+                }
+            }
+        }
+    
+        
+        // Playing rounds
+        for (let i=1; i<=numRounds; i++){
+            console.log("Starting round " + i);
+
+            const computerChoice = getComputerChoice();
+            const playerChoice = getPlayerChoice();
+
+            console.log("Computer chose: " + computerChoice)
+            console.log("Player chose: " + playerChoice)
+
+            let winner = playRound(playerChoice, computerChoice);
+
+            if (winner == "Player"){
+                playerScore++;
+                console.log("You win! " + playerChoice + " beats " + computerChoice);
+            } else if (winner == "Computer"){
+                computerScore++;
+                console.log("You lose! " + computerChoice + " beats " + playerChoice);
+            } else {
+                numTies++;
+                console.log("Tie game!");
+            }
+        }
+        
+        
+        console.log("Player Score: " + playerScore);
+        console.log("Computer Score: " + computerScore);
+        
+
+
+
+        </script>
+    
+</body>
+</html>
