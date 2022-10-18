@@ -1,3 +1,73 @@
-div{
-    font-size: 36px;
+body{
+    background-color: #2f303b;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img{
+    border-radius: 20px;
+}
+
+.header{
+    
+    padding: .5em;
+    background-color: #1c1c23;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 800;
+    color: #eec419
+}
+
+.playerRow, .computerRow{
+    
+    padding: 50px;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+}
+.user, .computer{
+    display: flex;
+    flex-direction: column;
+}
+
+.userScore, .computerScore{
+    padding: 20px 0px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #eec419;
+    text-align: center;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    width: 400px;
+    gap: 20px;
+    text-align: center;
+    color: #b7b9cc;
+    
+}
+
+.winner{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.windesc{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #1c1c23;
+    color: #b7b9cc;
+  
+    margin-top: 200px;
+    padding: 1em;
+    font-size: 18px;
 }

@@ -8,7 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div> This game is currently only playable in the console! </div>
+    <div class="header"> Rock Paper Scissor </div>
+    <div class="playerRow">
+        <div class="user">
+            <img src="images/userPic.jpg" alt="User Profile Pic" height="200">
+            <div class="userScore">You: 0</div>
+        </div>
+        
+        <img src="images/rockBlue.png" alt="User Rock" height="200" style="margin-left: 100px">
+        <img src="images/paperBlue.png" alt="User Paper" height="200">
+        <img src="images/scissorBlue.png" alt="User Scissor" height="200">
+    </div>
+
+    <div class="computerRow">
+        <div class="computer">
+            <img src="images/computerPic.jpg" alt="Computer Profile Pic" height="200">
+            <div class="computerScore"> HAL9000: 0</div>
+        </div>
+        
+        <img src="images/computerThinking.png" alt="Computer Thinking" height="200" style="margin-left: 50px">
+
+        <div class="results">
+            <div class="winner">Make your selection!</div>
+            <div class="windesc">HAL9000 is plotting...</div>
+        </div>
+
+    </div>
+
+    <div class="footer">Copyright Sebastian Hothaza</div>
 
 
     <script>
@@ -33,8 +60,7 @@
         
         // Issue: NO input checking
         function getPlayerChoice(){
-            return prompt("Choose: rock, paper or scissors");
-            //return "rock";
+            return "rock";
         }
         
 
