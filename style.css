@@ -30,10 +30,20 @@ img{
 .user, .computer{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-.userScore, .computerScore{
-    padding: 20px 0px;
+.score{
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: 25px;
+    font-weight: 600;
+    color: #eec419;
+
+}
+
+#userScore, #computerScore{
     font-size: 25px;
     font-weight: 600;
     color: #eec419;
@@ -51,12 +61,14 @@ img{
     
 }
 
-.winner{
+
+
+#winner{
     font-size: 50px;
     font-weight: 800;
 }
 
-.windesc{
+#windesc{
     font-size: 20px;
     font-style: italic;
 }
